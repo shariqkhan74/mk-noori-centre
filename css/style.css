@@ -106,7 +106,7 @@
 }
 
 .sticky-top.navbar-light .navbar-brand img {
-    max-height: 45px;
+    max-height: 65px;
 }
 
 @media (max-width: 991.98px) {
@@ -128,7 +128,7 @@
     }
 
     .navbar-light .navbar-brand img {
-        max-height: 45px;
+        max-height: 65px;
     }
 }
 
