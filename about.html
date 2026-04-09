@@ -132,8 +132,110 @@
                 font-size: 13px;
             }
         }
+        /* Destination */
 
-    
+        .destination {
+            background: #f8f9fa;
+        }
+
+            /* IMAGE BOX (MAIN FIX) */
+            .destination .img-box {
+                position: relative;
+                width: 100%;
+                height: 250px; /* SAME HEIGHT FOR ALL */
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            /* BIG IMAGE */
+            .destination .big-img .img-box {
+                height: 520px;
+            }
+
+            /* IMAGE */
+            .destination .img-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* IMPORTANT */
+                transition: 0.5s;
+            }
+
+            /* HOVER ZOOM */
+            .destination .img-box:hover img {
+                transform: scale(1.1);
+            }
+
+            /* DARK OVERLAY */
+            .destination .img-box::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            }
+
+            /* TEXT */
+            .destination .img-text {
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+                color: #fff;
+                font-weight: 600;
+                z-index: 2;
+            }
+
+            /* REMOVE OLD WHITE BOX STYLE */
+            .destination .bg-white {
+                display: none !important;
+            }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .destination .big-img .img-box {
+                height: 250px;
+            }
+        }
+        /* HERO BACKGROUND (use your image if needed) */
+        .hero-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/bg-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Optional overlay */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        /* Button hover */
+        .hero-header .btn-light:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        .hero-header .btn-outline-light:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .brand-logo {
+            height: 40px;
+        }
+
+        .brand-text {
+            font-size: clamp(16px, 4vw, 24px);
+            white-space: nowrap;
+        }
+
+        /* Important fix */
+        .navbar-brand {
+            max-width: 80%;
+        }
+
+        .navbar {
+            flex-wrap: nowrap !important;
+        }
     </style>
 </head>
 
@@ -192,27 +294,28 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0">
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0 flex-nowrap">
 
                 <!-- Logo Image -->
                 <img src="img/logo.png" alt="MK Noori Centre Logo" class="brand-logo">
 
                 <!-- Brand Name -->
-                <h1 class="brand-text m-0">MK Noori Centre</h1>
+                <h1 class="text-primary m-0 brand-text">MK Noori Centre</h1>
 
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
                     <a href="destination.html" class="nav-item nav-link">Destination</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="https://htmlcodex.com/downloading/?item=2111" class="btn btn-primary rounded-pill py-2 px-4">Buy Package</a>
+                <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Buy Package</a>
             </div>
         </nav>
 
@@ -221,13 +324,13 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="display-3 text-white animated slideInDown">About Us</h1>
-                        <nav aria-label="breadcrumb">
+                        <!--<nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
                                 <li class="breadcrumb-item text-white active" aria-current="page">About</li>
                             </ol>
-                        </nav>
+                        </nav>-->
                     </div>
                 </div>
             </div>
@@ -238,38 +341,72 @@
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5">
+
+                <!-- Image -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
                     </div>
                 </div>
+
+                <!-- Content -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                      <h1 class="mb-4">Welcome to <span class="text-primary">MK Noori Centre</span></h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">MK Noori Centre</h6>
+                    <h1 class="mb-4">Welcome to <span class="text-primary">MK Noori Centre</span></h1>
+
+                    <p class="mb-4">
+                        MK Noori Centre is your trusted partner for travel and financial services based in Goa.
+                        We provide complete solutions including money exchange, tour packages, and ticket bookings
+                        with reliable and customer-friendly service.
+                    </p>
+
+                    <p class="mb-4">
+                        Whether you are planning a Goa trip, booking flights or trains, or need secure money transfer services,
+                        we ensure fast processing, best rates, and a hassle-free experience for every customer.
+                    </p>
+
+                    <!-- Services Points -->
                     <div class="row gy-2 gx-4 mb-4">
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Money Exchange Services</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Flight Ticket Booking</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Railway Reservation</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Bus Ticket Booking</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Goa Tour Packages</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Scuba Diving & Sightseeing</p>
                         </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Money Transfer Services</p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Customer Support</p>
+                        </div>
+
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="service.html">
+                        Explore Services
+                    </a>
                 </div>
+
             </div>
         </div>
     </div>
