@@ -131,8 +131,68 @@
                 font-size: 13px;
             }
         }
+        /* Destination */
 
+        .destination {
+            background: #f8f9fa;
+        }
 
+            /* IMAGE BOX (MAIN FIX) */
+            .destination .img-box {
+                position: relative;
+                width: 100%;
+                height: 250px; /* SAME HEIGHT FOR ALL */
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            /* BIG IMAGE */
+            .destination .big-img .img-box {
+                height: 520px;
+            }
+
+            /* IMAGE */
+            .destination .img-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* IMPORTANT */
+                transition: 0.5s;
+            }
+
+            /* HOVER ZOOM */
+            .destination .img-box:hover img {
+                transform: scale(1.1);
+            }
+
+            /* DARK OVERLAY */
+            .destination .img-box::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            }
+
+            /* TEXT */
+            .destination .img-text {
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+                color: #fff;
+                font-weight: 600;
+                z-index: 2;
+            }
+
+            /* REMOVE OLD WHITE BOX STYLE */
+            .destination .bg-white {
+                display: none !important;
+            }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .destination .big-img .img-box {
+                height: 250px;
+            }
+        }
     </style>
 </head>
 
@@ -144,8 +204,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
-
     <!-- Topbar Start -->
     <div class="topbar-modern">
         <div class="container-fluid px-5">
@@ -190,8 +248,6 @@
         </div>
     </div>
     <!-- Topbar End -->
-
-
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
@@ -201,7 +257,8 @@
                 <img src="img/logo.png" alt="MK Noori Centre Logo" class="brand-logo">
 
                 <!-- Brand Name -->
-                <h1 class="brand-text m-0">MK Noori Centre</h1>
+                <!--<h1 class="brand-text m-0">MK Noori Centre</h1>-->
+                <h1 class="text-primary m-0">MK Noori Centre</h1>
 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -235,8 +292,6 @@
         </div>
     </div>
     <!-- Navbar & Hero End -->
-
-
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -277,96 +332,150 @@
         </div>
     </div>
     <!-- About End -->
-
-
     <!-- Service Start -->
-    <div class="container-fluid py-5">
+    <style>
+        .service-item {
+            background: #ffffff;
+            transition: all 0.4s ease;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: 100%;
+        }
+
+            .service-item:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0d6efd, #00c6ff);
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+
+    <div class="container-fluid py-5 bg-light">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h1 class="mb-5">Our Services</h1>
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold">Our Services</h6>
+                <h1 class="fw-bold">What We Offer</h1>
+                <p class="text-muted">Complete travel & financial solutions in one place</p>
             </div>
+
             <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Money Exchange -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-money-bill-wave"></i>
                         </div>
+                        <h5 class="service-title">Money Exchange</h5>
+                        <p class="service-desc">Best currency exchange rates with fast and secure service.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Tours & Travels -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-globe"></i>
                         </div>
+                        <h5 class="service-title">Tours & Travels</h5>
+                        <p class="service-desc">Domestic & international travel planning with expert guidance.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Tour Packages -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-map-marked-alt"></i>
                         </div>
+                        <h5 class="service-title">Tour Packages</h5>
+                        <p class="service-desc">Affordable and customized holiday packages for every destination.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Goa Sightseeing -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-umbrella-beach"></i>
                         </div>
+                        <h5 class="service-title">Goa Sightseeing</h5>
+                        <p class="service-desc">Explore Goa with guided tours, beaches, and local attractions.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Flight Booking -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-plane"></i>
                         </div>
+                        <h5 class="service-title">Flight Booking</h5>
+                        <p class="service-desc">Cheap and fast flight ticket booking with best deals.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Railway Reservation -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-train"></i>
                         </div>
+                        <h5 class="service-title">Railway Reservation</h5>
+                        <p class="service-desc">Quick and easy train ticket booking across India.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Bus Booking -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-bus"></i>
                         </div>
+                        <h5 class="service-title">Bus Ticket Booking</h5>
+                        <p class="service-desc">Comfortable bus tickets at affordable prices nationwide.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                <!-- Money Transfer -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-exchange-alt"></i>
                         </div>
+                        <h5 class="service-title">Money Transfer</h5>
+                        <p class="service-desc">Instant and secure domestic & international money transfers.</p>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
     <!-- Service End -->
-
-
     <!-- Destination Start -->
-    <div class="container-fluid py-5 destination">
+    <!--<div class="container-fluid py-5 destination">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
@@ -377,40 +486,188 @@
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-1.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Thailand</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-2.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Malaysia</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-3.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Australia</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/destination-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
-                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Indonesia</div>
+                                <img class="img-fluid" src="img/destination-1.jpg" alt="">-->
+    <!--<div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>-->
+    <!--<div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Palolem Beach</div>
+        </a>
+    </div>
+    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+        <a class="position-relative d-block overflow-hidden" href="">
+            <img class="img-fluid" src="img/destination-2.jpg" alt="">-->
+    <!--<div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>-->
+    <!--<div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Calangute Beach</div>
+        </a>
+    </div>
+    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+        <a class="position-relative d-block overflow-hidden" href="">
+            <img class="img-fluid" src="img/destination-3.jpg" alt="">-->
+    <!--<div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>-->
+    <!--<div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Baga Beach</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+        <a class="position-relative d-block h-100 overflow-hidden" href="">
+            <img class="img-fluid position-absolute w-100 h-100" src="img/destination-4.jpg" alt="" style="object-fit: cover;">-->
+    <!--<div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>-->
+    <!--<div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Basilica of Bom Jesus</div>
                     </a>
                 </div>
             </div>
         </div>
+    </div>-->
+    <div class="container-fluid py-5 destination">
+        <div class="container">
+
+            <!-- GOA SECTION -->
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">Goa Special</h6>
+                <h1 class="mb-4">Explore Goa</h1>
+            </div>
+
+            <div class="row g-3 mb-5">
+
+                <!-- Big Image -->
+                <div class="col-lg-6 wow zoomIn big-img" data-wow-delay="0.1s">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/bg-hero.jpg" alt="">
+                            <div class="img-text">Goa Beaches</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Small Grid -->
+                <div class="col-lg-6">
+                    <div class="row g-3">
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.2s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/Scuba diving in Goa.jpeg" alt="">
+                                    <div class="img-text">Scuba Diving</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.3s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/doodhsagar.jpeg" alt="">
+                                    <div class="img-text">Dudhsagar Waterfall</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.4s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/destination-2.jpg" alt="">
+                                    <div class="img-text">Calangute Beach</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.5s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/destination-3.jpg" alt="">
+                                    <div class="img-text">Baga Beach</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHER DESTINATIONS -->
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">India Tours</h6>
+                <h1 class="mb-5">Popular Destinations</h1>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Repeat Same Pattern -->
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Taj Mahal.jpeg">
+                            <div class="img-text">Taj Mahal (Agra)</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/delhi.jpg">
+                            <div class="img-text">Delhi</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Jaipur.jpg">
+                            <div class="img-text">Jaipur</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Udaipur.jpg">
+                            <div class="img-text">Udaipur</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/kashmir.jpg">
+                            <div class="img-text">Kashmir</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Munnar.jpeg">
+                            <div class="img-text">Munnar</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Badami.jpeg">
+                            <div class="img-text">Badami</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Hampi Karnataka.jpeg">
+                            <div class="img-text">Hampi Karnataka</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
     </div>
     <!-- Destination Start -->
-
-
     <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -452,9 +709,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3849.1578957479605!2d73.92330347511913!3d15.259182785309003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDE1JzMzLjEiTiA3M8KwNTUnMzMuMiJF!5e0!3m2!1sen!2sin!4v1775464668582!5m2!1sen!2sin"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3849.1578957479605!2d73.92330347511913!3d15.259182785309003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDE1JzMzLjEiTiA3M8KwNTUnMzMuMiJF!5e0!3m2!1sen!2sin!4v1775464668582!5m2!1sen!2sin"
+                            frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <form>
@@ -493,8 +750,6 @@
         </div>
     </div>
     <!-- Contact End -->
-
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -575,8 +830,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
