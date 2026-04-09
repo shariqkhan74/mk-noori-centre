@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tourist - Travel Agency HTML Template</title>
+    <title>MK NOORI CENTRE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -28,6 +28,214 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .topbar-modern {
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            padding: 8px 0;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        .topbar-left {
+            gap: 20px;
+        }
+
+        .top-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0.9;
+        }
+
+            .top-item i {
+                font-size: 13px;
+                color: #00c6ff;
+            }
+
+        /* SOCIAL ICON BASE */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            margin-left: 6px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+            /* BRAND COLORS */
+            .social-icon.twitter {
+                background: #1DA1F2;
+            }
+
+            .social-icon.facebook {
+                background: #1877F2;
+            }
+
+            .social-icon.linkedin {
+                background: #0A66C2;
+            }
+
+            .social-icon.instagram {
+                background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
+            }
+
+            .social-icon.youtube {
+                background: #FF0000;
+            }
+
+            /* HOVER EFFECT */
+            .social-icon:hover {
+                transform: translateY(-3px) scale(1.05);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            }
+
+
+        /* MOBILE FIX */
+        @media (max-width: 768px) {
+
+            .topbar-modern {
+                padding: 6px 0;
+                font-size: 12px;
+            }
+
+            .topbar-left {
+                flex-direction: column; /* stack items */
+                align-items: center;
+                gap: 5px;
+                text-align: center;
+            }
+
+            .top-item {
+                justify-content: center;
+                font-size: 12px;
+            }
+
+                /* Hide long email on mobile */
+                .top-item:nth-child(3) {
+                    display: none;
+                }
+
+            /* Social icons center */
+            .topbar-modern .col-lg-4 {
+                text-align: center !important;
+                margin-top: 5px;
+            }
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 13px;
+            }
+        }
+        /* Destination */
+
+        .destination {
+            background: #f8f9fa;
+        }
+
+            /* IMAGE BOX (MAIN FIX) */
+            .destination .img-box {
+                position: relative;
+                width: 100%;
+                height: 250px; /* SAME HEIGHT FOR ALL */
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            /* BIG IMAGE */
+            .destination .big-img .img-box {
+                height: 520px;
+            }
+
+            /* IMAGE */
+            .destination .img-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* IMPORTANT */
+                transition: 0.5s;
+            }
+
+            /* HOVER ZOOM */
+            .destination .img-box:hover img {
+                transform: scale(1.1);
+            }
+
+            /* DARK OVERLAY */
+            .destination .img-box::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            }
+
+            /* TEXT */
+            .destination .img-text {
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+                color: #fff;
+                font-weight: 600;
+                z-index: 2;
+            }
+
+            /* REMOVE OLD WHITE BOX STYLE */
+            .destination .bg-white {
+                display: none !important;
+            }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .destination .big-img .img-box {
+                height: 250px;
+            }
+        }
+        /* HERO BACKGROUND (use your image if needed) */
+        .hero-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/bg-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Optional overlay */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        /* Button hover */
+        .hero-header .btn-light:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        .hero-header .btn-outline-light:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .brand-logo {
+            height: 40px;
+        }
+
+        .brand-text {
+            font-size: clamp(16px, 4vw, 24px);
+            white-space: nowrap;
+        }
+
+        /* Important fix */
+        .navbar-brand {
+            max-width: 80%;
+        }
+
+        .navbar {
+            flex-wrap: nowrap !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,51 +246,75 @@
         </div>
     </div>
     <!-- Spinner End -->
-
-
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+    <div class="topbar-modern">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center">
+
+                <!-- Left Info -->
+                <div class="col-lg-8 d-flex flex-wrap align-items-center topbar-left">
+
+                    <div class="top-item">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <span title="1554 - AG F - 4 Ward no 1 Vasvaddo Benaulim Beach road Benaulim South Goa">
+                            Benaulim, South Goa
+                        </span>
+                    </div>
+
+                    <div class="top-item">
+                        <i class="fa fa-phone-alt"></i>
+                        <span>+91 9860687254</span>
+                    </div>
+
+                    <div class="top-item">
+                        <i class="fa fa-envelope"></i>
+                        <span title="nooricentre11@gmail.com">
+                            nooricentre11@gmail.com
+                        </span>
+                    </div>
+
                 </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+
+                <!-- Right Social -->
+                <div class="col-lg-4 text-lg-end text-center mt-2 mt-lg-0">
+
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+
                 </div>
+
             </div>
         </div>
     </div>
     <!-- Topbar End -->
-
-
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Tourist</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0 flex-nowrap">
+
+                <!-- Logo Image -->
+                <img src="img/logo.png" alt="MK Noori Centre Logo" class="brand-logo">
+
+                <!-- Brand Name -->
+                <h1 class="text-primary m-0 brand-text">MK Noori Centre</h1>
+
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="destination.html" class="nav-item nav-link active">Destination</a>
+                    <a href="destination.html" class="nav-item nav-link">Destination</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="https://htmlcodex.com/downloading/?item=2111" class="btn btn-primary rounded-pill py-2 px-4">Buy Pro Version</a>
+                <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Buy Package</a>
             </div>
         </nav>
 
@@ -91,73 +323,176 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="display-3 text-white animated slideInDown">Destination</h1>
-                        <nav aria-label="breadcrumb">
+                        <!--<nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
                                 <li class="breadcrumb-item text-white active" aria-current="page">Destination</li>
                             </ol>
-                        </nav>
+                        </nav>-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Navbar & Hero End -->
-
-
-    <!-- Destination Start -->
     <div class="container-fluid py-5 destination">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
-                <h1 class="mb-5">Popular Destination</h1>
+
+            <!-- GOA SECTION -->
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">Goa Special</h6>
+                <h1 class="mb-4">Explore Goa</h1>
             </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-1.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Thailand</div>
-                            </a>
+
+            <div class="row g-3 mb-5">
+
+                <!-- Big Image -->
+                <div class="col-lg-6 wow zoomIn big-img" data-wow-delay="0.1s">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/bg-hero.jpg" alt="">
+                            <div class="img-text">Goa Beaches</div>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-2.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Malaysia</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-3.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Australia</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/destination-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
-                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Indonesia</div>
                     </a>
                 </div>
+
+                <!-- Small Grid -->
+                <div class="col-lg-6">
+                    <div class="row g-3">
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.2s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/Scuba diving in Goa.jpeg" alt="">
+                                    <div class="img-text">Scuba Diving</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.3s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/doodhsagar.jpeg" alt="">
+                                    <div class="img-text">Dudhsagar Waterfall</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.4s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/destination-2.jpg" alt="">
+                                    <div class="img-text">Calangute Beach</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 wow zoomIn" data-wow-delay="0.5s">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/destination-3.jpg" alt="">
+                                    <div class="img-text">Baga Beach</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+            <!-- OTHER DESTINATIONS -->
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">India Tours</h6>
+                <h1 class="mb-5">Popular Destinations</h1>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Repeat Same Pattern -->
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Taj Mahal.jpeg">
+                            <div class="img-text">Taj Mahal (Agra)</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/delhi.jpg">
+                            <div class="img-text">Delhi</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Jaipur.jpg">
+                            <div class="img-text">Jaipur</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Udaipur.jpg">
+                            <div class="img-text">Udaipur</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/kashmir.jpg">
+                            <div class="img-text">Kashmir</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Munnar.jpeg">
+                            <div class="img-text">Munnar</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Badami.jpeg">
+                            <div class="img-text">Badami</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow zoomIn">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/Hampi Karnataka.jpeg">
+                            <div class="img-text">Hampi Karnataka</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
         </div>
     </div>
-    <!-- Destination Start -->
-        
-
+    <!-- Destination END -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Company</h4>
+                    <h4 class="text-white mb-3">MK Noori Centre</h4>
                     <a class="btn btn-link" href="">About Us</a>
                     <a class="btn btn-link" href="">Contact Us</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
@@ -166,9 +501,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>1554 - AG F - 4 Ward no 1 Vasvaddo Benaulim Beach road Benaulim South Goa</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9860687254</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>nooricentre11@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -199,41 +534,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!--<div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <span id="year"></span>
+                        <a class="border-bottom" href="https://mknooricentre.netlify.app" target="_blank">
+                            MK Noori Centre
+                        </a>, All Rights Reserved.
 
-                        <!--/*** The author’s attribution link below must remain intact on your website. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version from https://htmlcodex.com . ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        <br class="d-block d-md-none" />
+
+                        Designed & Developed By
+                        <a class="border-bottom" href="https://github.com/shariqkhan74" target="_blank">
+                            Mohd Shariq Ali Khan
+                        </a>
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
+
+                    <script>
+                        document.getElementById("year").innerHTML = new Date().getFullYear();
+                    </script>
+                    <!--<div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
                             <a href="">Home</a>
                             <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
