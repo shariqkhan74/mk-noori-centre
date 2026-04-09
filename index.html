@@ -193,6 +193,30 @@
                 height: 250px;
             }
         }
+        /* HERO BACKGROUND (use your image if needed) */
+        .hero-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/bg-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Optional overlay */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        /* Button hover */
+        .hero-header .btn-light:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        .hero-header .btn-outline-light:hover {
+            background: #fff;
+            color: #000;
+        }
     </style>
 </head>
 
@@ -276,16 +300,33 @@
             </div>
         </nav>
 
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header position-relative">
+
+            <!-- Overlay (optional for better readability) -->
+            <div class="hero-overlay"></div>
+
+            <div class="container py-5 position-relative">
                 <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Vacation With Us</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Tempor erat elitr rebum at clita diam amet diam et eos erat ipsum lorem sit</p>
-                        <div class="position-relative w-75 mx-auto animated slideInDown">
-                            <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: GOA">
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
+                    <div class="col-lg-10 text-center">
+
+                        <h1 class="display-3 text-white mb-3 animated slideInDown">
+                            Your Trusted Travel & Money Exchange Partner
+                        </h1>
+
+                        <p class="fs-4 text-white mb-4 animated slideInDown">
+                            Flight Booking • Railway Reservation • Goa Tours • Money Transfer • Best Exchange Rates
+                        </p>
+
+                        <!-- Buttons -->
+                        <div class="animated slideInDown">
+                            <a href="#services" class="btn btn-light rounded-pill py-3 px-5 me-2">
+                                Explore Services
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light rounded-pill py-3 px-5">
+                                Contact Us
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -296,38 +337,72 @@
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5">
+
+                <!-- Image -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
                     </div>
                 </div>
+
+                <!-- Content -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">MK Noori Centre</h6>
-                    <h1 class="mb-4">Welcome to <span class="text-primary">Tourist</span></h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="mb-4">Welcome to <span class="text-primary">MK Noori Centre</span></h1>
+
+                    <p class="mb-4">
+                        MK Noori Centre is your trusted partner for travel and financial services based in Goa.
+                        We provide complete solutions including money exchange, tour packages, and ticket bookings
+                        with reliable and customer-friendly service.
+                    </p>
+
+                    <p class="mb-4">
+                        Whether you are planning a Goa trip, booking flights or trains, or need secure money transfer services,
+                        we ensure fast processing, best rates, and a hassle-free experience for every customer.
+                    </p>
+
+                    <!-- Services Points -->
                     <div class="row gy-2 gx-4 mb-4">
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Money Exchange Services</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Flight Ticket Booking</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Railway Reservation</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Bus Ticket Booking</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Goa Tour Packages</p>
                         </div>
+
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Scuba Diving & Sightseeing</p>
                         </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Money Transfer Services</p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Customer Support</p>
+                        </div>
+
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="#">
+                        Explore Services
+                    </a>
                 </div>
+
             </div>
         </div>
     </div>
@@ -797,34 +872,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!--<div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">MK Noori Centre</a>, All Right Reserved.
+                        &copy; <span id="year"></span>
+                        <a class="border-bottom" href="https://mknooricentre.netlify.app" target="_blank">
+                            MK Noori Centre
+                        </a>, All Rights Reserved.
 
-                        <!--/*** The author’s attribution link below must remain intact on your website. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version from https://htmlcodex.com . ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">Mohd Shariq Ali Khan</a>
+                        <br class="d-block d-md-none" />
+
+                        Designed & Developed By
+                        <a class="border-bottom" href="https://github.com/shariqkhan74" target="_blank">
+                            Mohd Shariq Ali Khan
+                        </a>
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
+
+                    <script>
+                        document.getElementById("year").innerHTML = new Date().getFullYear();
+                    </script>
+                    <!--<div class="col-md-6 text-center text-md-end">
+        <div class="footer-menu">
+            <a href="">Home</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FQAs</a>
+        </div>
+    </div>-->
                 </div>
             </div>
         </div>
