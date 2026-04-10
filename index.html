@@ -29,6 +29,68 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+        /* ===== FINAL MOBILE NAVBAR FIX ===== */
+
+        @media (max-width: 991.98px) {
+
+            /* Allow wrapping */
+            .navbar {
+                flex-wrap: wrap !important;
+            }
+
+            /* Navbar background */
+            .navbar-light {
+                background: #fff !important;
+            }
+
+            /* Fix brand */
+            .navbar-brand {
+                max-width: 75%;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .brand-logo {
+                height: 35px;
+            }
+
+            .brand-text {
+                font-size: 16px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            /* FIX BIG NAV LINK ISSUE */
+            .navbar-light .navbar-nav .nav-link {
+                padding: 10px 0 !important;
+                margin-right: 0 !important;
+                color: #000 !important;
+            }
+
+            /* Collapse dropdown style */
+            .navbar-collapse {
+                width: 100%;
+                background: #fff;
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+
+            /* Button full width */
+            .navbar .btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            /* Fix toggler */
+            .navbar-toggler {
+                margin-left: auto;
+                border: none;
+            }
+        }
         .topbar-modern {
             background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
             padding: 8px 0;
@@ -227,14 +289,7 @@
             white-space: nowrap;
         }
 
-        /* Important fix */
-        .navbar-brand {
-            max-width: 80%;
-        }
-
-        .navbar {
-            flex-wrap: nowrap !important;
-        }
+ 
     </style>
 </head>
 
@@ -304,7 +359,7 @@
             </a>
 
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
