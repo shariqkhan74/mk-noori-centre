@@ -1,0 +1,6 @@
+# Robots.txt for MK Noori Centre (https://mknooricentre.netlify.app/)
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://mknooricentre.netlify.app/sitemap.xml

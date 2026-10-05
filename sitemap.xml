@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://mknooricentre.netlify.app/</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/bg-hero.jpg</image:loc>
+            <image:title>MK Noori Centre - Travel Agency and Money Exchange in Goa</image:title>
+            <image:caption>Scenic Goa beach landscape and tour packages by MK Noori Centre Benaulim</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/logo.png</image:loc>
+            <image:title>MK Noori Centre Brand Logo</image:title>
+        </image:image>
+    </url>
+
+    <!-- Services Page -->
+    <url>
+        <loc>https://mknooricentre.netlify.app/service.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/bg-hero.jpg</image:loc>
+            <image:title>Travel Services in Goa - MK Noori Centre</image:title>
+        </image:image>
+    </url>
+
+    <!-- Tour Destinations Page -->
+    <url>
+        <loc>https://mknooricentre.netlify.app/destination.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/Scuba%20diving%20in%20Goa.jpeg</image:loc>
+            <image:title>Scuba Diving Adventure in Goa</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/doodhsagar.jpeg</image:loc>
+            <image:title>Dudhsagar Waterfall Tour in Goa</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/destination-2.jpg</image:loc>
+            <image:title>Calangute Beach Holiday Tour in Goa</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/Taj%20Mahal.jpeg</image:loc>
+            <image:title>Taj Mahal Agra Tour Package</image:title>
+        </image:image>
+    </url>
+
+    <!-- About Us Page -->
+    <url>
+        <loc>https://mknooricentre.netlify.app/about.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/about.jpg</image:loc>
+            <image:title>About MK Noori Centre Travel and Forex Hub in Benaulim</image:title>
+        </image:image>
+    </url>
+
+    <!-- Contact Us Page -->
+    <url>
+        <loc>https://mknooricentre.netlify.app/contact.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://mknooricentre.netlify.app/img/about.jpg</image:loc>
+            <image:title>Contact MK Noori Centre Branch in Benaulim South Goa</image:title>
+        </image:image>
+    </url>
+</urlset>
